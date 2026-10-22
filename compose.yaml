@@ -1,0 +1,32 @@
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: ai-document-api:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - chroma_data:/app/data/chroma_db
+      - huggingface_cache:/app/data/huggingface
+    restart: unless-stopped
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    image: ai-document-streamlit:latest
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://api:8000
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  chroma_data:
+  huggingface_cache:

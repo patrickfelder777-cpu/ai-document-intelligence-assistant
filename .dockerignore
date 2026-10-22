@@ -1,0 +1,10 @@
+.venv/
+.git/
+.env
+.pytest_cache/
+__pycache__/
+*.pyc
+data/chroma_db/
+data/huggingface/
+tests/
+*.log
