@@ -1,5 +1,13 @@
 # AI Document Intelligence Assistant
 
+## Project Demo
+
+Watch my AI Document Intelligence Assistant in action:
+
+[▶ Watch the AI Document Intelligence Demo](./AI_Document_Intelligence_Demo.mp4)
+
+This demonstration showcases PDF uploading, AI-powered document questions, semantic search, and source citations.
+
 An AI-powered document question-answering application built with Python, FastAPI, Streamlit, ChromaDB, and Retrieval-Augmented Generation (RAG).
 
 Upload a PDF, ask questions about its contents, and receive AI-generated answers with page-level source citations.
@@ -76,10 +84,3 @@ Create a `.env` file in the project root:
 ```env
 NEBIUS_API_KEY=your
 
-## Project Demo
-
-Watch my AI Document Intelligence Assistant in action:
-
-[▶ Watch the AI Document Intelligence Demo](./AI_Document_Intelligence_Demo.mp4)
-
-This demonstration showcases PDF uploading, AI-powered document questions, semantic search, and source citations.
